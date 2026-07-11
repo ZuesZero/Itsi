@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-label: "Inter", sans-serif;
+
+  --color-primary-teal: #004655;
+  --color-primary-container: #005f73;
+  --color-secondary-green: #2c694e;
+  --color-secondary-container: #aeeecb;
+  --color-background-paper: #fcf9f8;
+  --color-surface-container: #f0eded;
+  --color-on-surface: #1b1b1b;
+  --color-on-surface-variant: #3f484c;
+}
+
+@layer base {
+  :root {
+    --color-primary-teal: #004655;
+    --color-primary-container: #005f73;
+    --color-secondary-green: #2c694e;
+    --color-secondary-container: #aeeecb;
+    --color-background-paper: #fcf9f8;
+    --color-surface-container: #f0eded;
+    --color-on-surface: #1b1b1b;
+    --color-on-surface-variant: #3f484c;
+  }
+
+  :root.dark {
+    --color-primary-teal: #7dd3fc;
+    --color-primary-container: #004655;
+    --color-secondary-green: #7dd3fc;
+    --color-secondary-container: #004655;
+    --color-background-paper: #002a33;
+    --color-surface-container: #003641;
+    --color-on-surface: #fcf9f8;
+    --color-on-surface-variant: #7dd3fc;
+  }
+
+  body {
+    @apply bg-background-paper text-on-surface font-sans antialiased transition-colors duration-300;
+  }
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.water-pattern {
+  background-image: radial-gradient(circle at 2px 2px, rgba(0, 95, 115, 0.05) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+@keyframes wateringPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(13, 148, 136, 0.4);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 24px 8px rgba(13, 148, 136, 0.25);
+    transform: scale(1.02);
+    border-color: rgba(13, 148, 136, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(13, 148, 136, 0);
+    transform: scale(1);
+  }
+}
+
+.watering-pulse {
+  animation: wateringPulse 2s infinite ease-in-out;
+  border-color: rgba(13, 148, 136, 0.5) !important;
+}
+
