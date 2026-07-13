@@ -18,7 +18,7 @@ import {
   AlertCircle
 } from 'lucide-react';
 import { useLanguage } from './App';
-import { isSupabaseConfigured, getMySubmissions } from './services/supabase';
+import { isSupabaseConfigured, getMySubmissions } from './supabase';
 
 export default function LoginPage() {
   const navigate = useNavigate();
