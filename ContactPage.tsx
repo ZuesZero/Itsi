@@ -20,7 +20,7 @@ import {
   AlertCircle
 } from 'lucide-react';
 import { useLanguage } from './App';
-import { submitContactMessage, isSupabaseConfigured } from './services/supabase';
+import { submitContactMessage, isSupabaseConfigured } from './supabase';
 
 export default function ContactPage() {
   const navigate = useNavigate();
