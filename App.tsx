@@ -73,7 +73,7 @@ import {
   ArrowRight
 } from 'lucide-react';
 import { getGardenAdvice } from './ai';
-import { reservePackage, isSupabaseConfigured } from './services/supabase';
+import { reservePackage, isSupabaseConfigured } from './supabase';
 
 const translations = {
   en: {
