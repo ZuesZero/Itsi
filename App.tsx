@@ -72,7 +72,7 @@ import {
   Twitter,
   ArrowRight
 } from 'lucide-react';
-import { getGardenAdvice } from './services/ai';
+import { getGardenAdvice } from '.ai';
 import { reservePackage, isSupabaseConfigured } from './services/supabase';
 
 const translations = {
